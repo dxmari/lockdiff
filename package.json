@@ -1,0 +1,38 @@
+{
+  "name": "lockdiff",
+  "version": "1.0.0",
+  "description": "Human-readable, risk-aware diffs for package-lock.json in pull requests",
+  "main": "dist/cli/index.js",
+  "bin": {
+    "lockdiff": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli/index.ts",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": [
+    "npm",
+    "package-lock.json",
+    "dependencies",
+    "security",
+    "ci",
+    "pr"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
+

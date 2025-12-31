@@ -1,2 +1,61 @@
-# lockdiff
-Human‑readable, risk‑aware diffs for package-lock.json in pull requestsTurn unreadable lockfile changes into clear, actionable insights for reviewers.
+# Lockdiff
+
+> **Human‑readable, risk‑aware diffs for package-lock.json in pull requests**  
+> Turn unreadable lockfile changes into clear, actionable insights for reviewers.
+
+## Installation
+
+No installation required.
+
+```bash
+npx lockdiff
+```
+
+## Usage
+
+### Local Usage
+
+```bash
+npx lockdiff
+```
+
+Outputs a summary to stdout.
+
+### CI / Pull Request Usage
+
+```bash
+npx lockdiff --ci
+```
+
+### JSON Output
+
+```bash
+npx lockdiff --json
+```
+
+### Custom File Paths
+
+```bash
+npx lockdiff --before path/to/before/package-lock.json --after path/to/after/package-lock.json
+```
+
+## Features
+
+- Detects added & removed dependencies (direct & transitive)
+- Highlights lifecycle script changes
+- Detects license changes
+- Flags unmaintained packages (heuristic)
+- Deterministic, side‑effect‑free analysis
+- CI & PR‑first by design
+
+## Operating Modes
+
+| Mode     | Behavior                | Exit Code |
+| -------- | ----------------------- | --------- |
+| Default  | Report only             | `0`       |
+| `--ci`   | CI‑friendly output      | `0`       |
+| `--json` | Machine‑readable output | `0`       |
+
+> Lockdiff **never blocks builds in v1**. It informs — it does not enforce.
+
+For more details, see [docs/lockdiff_readme.md](docs/lockdiff_readme.md).
