@@ -1,4 +1,4 @@
-# Lockdiff
+# Lockwatch
 
 > **Human‑readable, risk‑aware diffs for package-lock.json in pull requests**  
 > Turn unreadable lockfile changes into clear, actionable insights for reviewers.
@@ -8,7 +8,7 @@
 No installation required.
 
 ```bash
-npx lockdiff
+npx lockwatch
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ npx lockdiff
 ### Local Usage
 
 ```bash
-npx lockdiff
+npx lockwatch
 ```
 
 Outputs a summary to stdout.
@@ -24,19 +24,19 @@ Outputs a summary to stdout.
 ### CI / Pull Request Usage
 
 ```bash
-npx lockdiff --ci
+npx lockwatch --ci
 ```
 
 ### JSON Output
 
 ```bash
-npx lockdiff --json
+npx lockwatch --json
 ```
 
 ### Custom File Paths
 
 ```bash
-npx lockdiff --before path/to/before/package-lock.json --after path/to/after/package-lock.json
+npx lockwatch --before path/to/before/package-lock.json --after path/to/after/package-lock.json
 ```
 
 ## Features
@@ -56,6 +56,6 @@ npx lockdiff --before path/to/before/package-lock.json --after path/to/after/pac
 | `--ci`   | CI‑friendly output      | `0`       |
 | `--json` | Machine‑readable output | `0`       |
 
-> Lockdiff **never blocks builds in v1**. It informs — it does not enforce.
+> Lockwatch **never blocks builds in v1**. It informs — it does not enforce.
 
 For more details, see [docs/lockdiff_readme.md](docs/lockdiff_readme.md).

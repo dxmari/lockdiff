@@ -1,10 +1,10 @@
 {
-  "name": "lockdiff",
+  "name": "lockwatch",
   "version": "1.0.0",
   "description": "Human-readable, risk-aware diffs for package-lock.json in pull requests",
   "main": "dist/cli/index.js",
   "bin": {
-    "lockdiff": "./dist/cli/index.js"
+    "lockwatch": "./dist/cli/index.js"
   },
   "scripts": {
     "build": "tsc",
