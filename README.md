@@ -144,26 +144,9 @@ This helps reviewers understand the true impact of adding a single package.
 
 Lockwatch follows a deterministic analysis pipeline:
 
-```mermaid
-flowchart TD
-    A[Lockfile Changes Detected] --> B[Parse Before Lockfile]
-    A --> C[Parse After Lockfile]
-    B --> D[Extract Package Metadata]
-    C --> E[Extract Package Metadata]
-    D --> F[Compute Dependency Diff]
-    E --> F
-    F --> G[Detect Added/Removed Dependencies]
-    D --> H[Risk Analysis Engine]
-    E --> H
-    H --> I[Detect Lifecycle Scripts]
-    H --> J[Detect License Changes]
-    H --> K[Flag Unmaintained Packages]
-    G --> L[Generate Report]
-    I --> L
-    J --> L
-    K --> L
-    L --> M[Output Summary]
-```
+![Lockwatch Analysis Pipeline](docs/Lockfile-diagram.png)
+
+*Figure: Complete workflow showing how Lockwatch analyzes lockfile changes to generate risk-aware reports*
 
 ### Analysis Pipeline
 

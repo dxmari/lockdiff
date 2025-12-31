@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/cli/index.ts",
-    "test": "node --test tests/unit/*.test.js tests/integration/*.test.js"
+    "test": "node --test tests/unit/*.test.js tests/integration/*.test.js",
+    "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
     "lockfile",
@@ -45,6 +46,14 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dxmari/lockwatch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dxmari/lockwatch/issues"
+  },
+  "homepage": "https://github.com/dxmari/lockwatch#readme",
   "engines": {
     "node": ">=18.0.0"
   },
